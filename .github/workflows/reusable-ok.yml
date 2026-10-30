@@ -1,0 +1,17 @@
+name: reusable ok
+on:
+  workflow_call:
+    inputs:
+      debug:
+        type: boolean
+        required: false
+    secrets:
+      SCCM_GITHUB_APP_ID:
+        required: false
+      SCCM_GITHUB_APP_PRIVATE_KEY:
+        required: false
+jobs:
+  work:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "ran with appid=${{ secrets.SCCM_GITHUB_APP_ID != '' }}"
