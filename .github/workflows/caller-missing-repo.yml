@@ -1,5 +1,7 @@
 name: caller missing repo
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 jobs:
   call:
