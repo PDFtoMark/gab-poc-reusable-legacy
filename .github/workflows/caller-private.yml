@@ -1,0 +1,10 @@
+name: caller private reusable
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: PDFtoMark/gab-poc-reuse-src/.github/workflows/reusable.yml@main
+    with:
+      debug: true
+    secrets:
+      SCCM_GITHUB_APP_ID: ${{ secrets.SCCM_GITHUB_APP_ID }}
