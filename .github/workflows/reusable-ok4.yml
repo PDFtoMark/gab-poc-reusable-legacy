@@ -1,0 +1,22 @@
+name: ok callee four secrets
+on:
+  workflow_call:
+    inputs:
+      debug:
+        required: false
+        type: boolean
+        default: true
+    secrets:
+      SCCM_GITHUB_APP_ID:
+        required: false
+      SCCM_GITHUB_APP_PRIVATE_KEY:
+        required: false
+      ARTIFACTORY_USER:
+        required: false
+      ARTIFACTORY_TOKEN:
+        required: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "reached with debug=${{ inputs.debug }}"
