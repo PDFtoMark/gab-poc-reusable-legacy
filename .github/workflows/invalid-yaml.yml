@@ -1,0 +1,10 @@
+name: invalid yaml
+on:
+  push:
+    branches: [main]
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hi
+      - bad: [unclosed
