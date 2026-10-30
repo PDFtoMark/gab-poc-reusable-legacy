@@ -1,0 +1,11 @@
+name: caller ok
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/reusable-ok.yml
+    with:
+      debug: true
+    secrets:
+      SCCM_GITHUB_APP_ID: ${{ secrets.SCCM_GITHUB_APP_ID }}
+      SCCM_GITHUB_APP_PRIVATE_KEY: ${{ secrets.SCCM_GITHUB_APP_PRIVATE_KEY }}
