@@ -1,0 +1,9 @@
+name: caller bad input
+on:
+  push:
+    branches: [main]
+jobs:
+  call:
+    uses: ./.github/workflows/reusable-ok.yml
+    with:
+      not_declared: true
