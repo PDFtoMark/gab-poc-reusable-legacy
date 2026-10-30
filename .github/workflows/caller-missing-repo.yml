@@ -1,0 +1,8 @@
+name: caller missing repo
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: PDFtoMark/gab-does-not-exist-zzz/.github/workflows/validate-articles.yml@main
+    with:
+      debug: true
